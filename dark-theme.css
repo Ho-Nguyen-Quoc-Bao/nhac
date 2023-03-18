@@ -1,0 +1,15 @@
+body {
+  color: #eee;
+  background: #121212;
+}
+
+body a {
+  color: #ffffff;
+}
+.dropdown-child a{
+  color: black;
+}
+#ft{
+  color: black;
+  background-color: white;
+}

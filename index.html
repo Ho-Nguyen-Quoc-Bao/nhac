@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo_600x600.png" type = "image/x-icon">
+    <title>Nhạc Của Tui</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="scrip.js"> -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="light-theme.css" rel="stylesheet" id="theme-link">
+</head>
+<body>
+    <button class="btn-toggle">Dark-Mode</button>
+    <script>
+      const btn = document.querySelector(".btn-toggle");
+      const theme = document.querySelector("#theme-link");
+      btn.addEventListener("click", function() {
+        if (theme.getAttribute("href") == "light-theme.css") {
+          theme.href = "dark-theme.css";
+        } else {
+          theme.href = "light-theme.css";
+        }
+      });
+    </script>
+    <header>
+        <a id="tieudetren" href=""></a>
+        <div id="tieudechinh" style="font-size: 100px;text-align: center;">
+            <marquee behavior="alternate" width="10%"><span style='color:cyan;'></span></marquee><a href=""><span style='color:#FF0000;'>N</span><span style='color:#FF7F00;'>H</span><span style='color:#FFFF00;'>A</span><span style='color:#7FFF00;'>C</span> <span style='color:#00FF7F;'>C</span><span style='color:#00FEFF;'>U</span><span style='color:#007FFF;'>A</span> <span style='color:#7F00FF;'>T</span><span style='color:#FF00FE;'>U</span><span style='color:#FF007F;'>I</span></a><marquee behavior="alternate" width="10%"><span style='color:cyan;'></span></marquee>
+            
+        </div>
+    </header>
+    <nav>
+        <ul class="mainmenu">
+            <a href="ho-nguyen-quoc-bao.github.io"><img id="logo" src="https://upload.wikimedia.org/wikipedia/vi/0/05/NhacCuaTuilogo.png" alt=""></a>
+            <div class="dropdown">
+                <a class="baihat" href="https://www.nhaccuatui.com/bai-hat/bai-hat-moi.html">Bài Hát</a>
+                <div class="dropdown-child">
+                <a href="">Việt Nam</a>
+                <a href="">Âu Mỹ</a>
+                <a href="">Châu Á</a>
+                <a href="">Hàn Quốc</a>
+                <a href="">Khác</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="baihat" href="https://www.nhaccuatui.com/playlist/playlist-moi.html">PlayList</a>
+                <div class="dropdown-child">
+                <a href="">Remix</a>
+                <a href="">Pop</a>
+                <a href="">Rop</a>
+                <a href="">Indie</a>
+                <a href="">Latin</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="baihat" href="https://www.nhaccuatui.com/playlist/tags">Tuyển Tập</a>
+                <div class="dropdown-child">
+                <a href="">Thể Loại</a>
+                <a href="">Tâm Trạng</a>
+                <a href="">Khung Cảnh</a>
+                <a href="">Chủ Đề</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="baihat" href="https://www.nhaccuatui.com/video.html">Video</a>
+                <div class="dropdown-child">
+                <a href="">Việt Nam</a>
+                <a href="">Âu Mỹ</a>
+                <a href="">Châu Á</a>
+                <a href="">Karaoke</a>
+                <a href="">Khác</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="baihat" href="https://www.nhaccuatui.com/bai-hat/top-20.nhac-viet.html">BXH</a>
+                <div class="dropdown-child">
+                <a href="">Việt Nam</a>
+                <a href="">Âu Mỹ</a>
+                <a href="">Hàn Quốc</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="baihat" href="https://www.nhaccuatui.com/chu-de.html">Chủ Đề</a>
+                <div class="dropdown-child">
+                <a href="">The Best Of 2022</a>
+                <a href="">Hot US-UK</a>
+                <a href="">Indie</a>
+                <a href="">EDM</a>
+                <a href="">Acoustic</a>
+                <a href="">Lofi</a>
+                <a href="">Bolero</a>
+                <a href="">Piano</a>
+                </div>
+            </div>
+            <a href=""><i style="font-size: 20px;" class="fas fa-cloud-upload-alt"></i></a> 
+            <a href="https://www.nhaccuatui.com/nhaccuatui-vip/mua-vip"><i style="font-size: 20px;" class="fas fa-store"></i></a>
+            <div class="box">
+                <div class="container-1">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Tìm kiếm bài hát..." />
+                </div>
+            </div>
+            <div id="button">
+                <button id="btnDangnhap" value="OK" type="button" onclick="dangnhap()">Đăng Nhập</button>  
+                <script>  
+                    function dangnhap(){  
+                        alert("Không có tài khoản cũng bày đặt bấm đăng nhập :))");  
+                    }  
+                </script>
+                <button id="btnDangki" value="OK" type="button" onclick="dangki()">Đăng Kí</button>  
+                <script>  
+                    function dangki(){  
+                        alert("Bạn chưa đủ tuổi để đăng kí !!!");
+                        alert("Nhấn vào OK để đóng thông báo này")
+                    }  
+                </script>
+            </div>
+        </ul>
+    </nav>
+    <div class="slideshow-container" style="margin-right:320px;">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/1.jpg" style="width:120%;">
+        </div>
+      
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/2.jpg" style="width:120%">
+        </div>
+      
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/3.jpg" style="width:120%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/4.jpg" style="width:120%">
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/5.jpg" style="width:120%">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="images/6.jpg" style="width:120%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <br>
+    <!-- <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div> -->
+
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+    </script>
+    <i class="fa-light fa-cloud-arrow-up"></i>
+    <div id="danhsach" style="margin-right:120px; margin-left: 10px;">
+        <h2 style="color: cornflowerblue; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">BXH BÀI HÁT</h2>
+        <div>
+            <img id="anh1" src="images/omo.jpg" width="160px" height="155px" alt="">
+            <div id="bai1">
+                <h2>
+                Waitting For You
+                </h2>                                    
+                <p>
+                OMO
+                </p>
+                <audio controls >
+                    <source src="music/Waiting For You - OMO.ogg" type="audio/ogg">
+                    <source src="music/Waiting For You - OMO.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+        <div class="bai2">
+            <img id="anh2" src="images/3107 4.jpg" width="auto" alt="">
+            <div id="bai2">
+                <h2>
+                3107 4
+                </h2>                                    
+                <p>
+                W/n, ERIK, Nâu
+                </p>
+                <audio controls >
+                    <source src="music/3107 4.ogg" type="audio/ogg">
+                    <source src="music/3107 4.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+        <div class="bai3">
+            <img id="anh3" src="images/bentrentanglau.jpg" width="auto" alt="">
+            <div id="bai3">
+                <h2>
+                Bên Trên Tầng Lầu
+                </h2>                                    
+                <p>
+                Tăng Duy Tân
+                </p>
+                <audio controls >
+                    <source src="music/Ben Tren Tang Lau.ogg" type="audio/ogg">
+                    <source src="music/Ben Tren Tang Lau.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+        <div class="bai4">
+            <img id="anh4" src="images/devuong.jpg" width="auto" alt="">
+            <div id="bai4">
+                <h2>
+                Đế Vương
+                </h2>                                    
+                <p>
+                Đình Dũng
+                </p>
+                <audio controls >
+                    <source src="music/De Vuong.ogg" type="audio/ogg">
+                    <source src="music/De Vuong.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+        <div class="bai5">
+            <img id="anh5" src="images/thanhhung.jpg" width="auto" alt="">
+            <div id="bai5">
+                <h2>
+                Tệ Thật, Anh Nhớ Em
+                </h2>                                    
+                <p>
+                Thanh Hưng
+                </p>
+                <audio controls >
+                    <source src="music/Te That, Anh Nho Em.ogg" type="audio/ogg">
+                    <source src="music/Te That, Anh Nho Em.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+        <div class="bai6">
+            <img id="anh6" src="images/22.jpg" width="auto" alt="">
+            <div id="bai6">
+                <h2>
+                Hai Mươi Hai (22)
+                </h2>                                    
+                <p>
+                    Hứa Kim Tuyền, AMEE
+                </p>
+                <audio controls>
+                    <source src="music/hai muoi hai.ogg" type="audio/ogg">
+                    <source src="music/hai muoi hai.mp3" type="audio/mpeg">
+                </audio>
+            </div>   
+        </div>
+    </div>   
+    <div id="bentrai">
+        <h2 style="color: cornflowerblue; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 182px;">CÁC BÀI HÁT</h2>
+        <div class="khung1">
+            <a href="https://www.nhaccuatui.com/video/da-doan-phan-manh-quynh.U8R5rGW6ReDic.html"><img style="float: left;" src="images/đa đoan.jpg" width="70px" height="70px" alt=""></a>
+            <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                <p style="font-size: 25;">
+                    <a href="https://www.nhaccuatui.com/video/da-doan-phan-manh-quynh.U8R5rGW6ReDic.html">Đa Đoan</a>
+                </p>                                    
+                <p style="font-size: 10px;">
+                    Phan Mạnh Quỳnh
+                </p>
+            </div>
+            <div style="margin-left: 380px;">
+                <a href="https://www.nhaccuatui.com/video/tung-la-cua-nhau-bao-anh-ft-tao.oaRqIDwEVXeoo.html"><img style="float: left;" src="images/từng là của nhau.jpg" width="70px" height="70px" alt=""></a> 
+                <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                    <p style="font-size: 25;">
+                        <a href="https://www.nhaccuatui.com/video/tung-la-cua-nhau-bao-anh-ft-tao.oaRqIDwEVXeoo.html">Từng Là Của Nhau</a>
+                    </p>                                    
+                    <p style="font-size: 10px;">
+                        Bảo Anh, Táo
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="khung2">
+            <a href="https://www.nhaccuatui.com/video/em-dau-lam-day-huong-ly.gnY535aSFnh9U.html"><img style="float: left;" src="images/em đau lắm đấy.jpg" width="70px" height="70px" alt=""></a>
+            <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                <p style="font-size: 25;">
+                    <a href="https://www.nhaccuatui.com/video/em-dau-lam-day-huong-ly.gnY535aSFnh9U.html">Em Đau Lắm Đấy</a>
+                </p>                                    
+                <p style="font-size: 10px;">
+                    Hương Ly
+                </p>
+            </div>
+            <div style="margin-left: 380px;">
+                <a href="https://www.nhaccuatui.com/video/ngoi-sao-co-don-jack-j97.ORrSB5kFo8xyN.html"><img style="float: left;" src="images/ngôi sao cô đơn.jpg" width="70px" height="70px" alt=""></a>  
+                <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                    <p style="font-size: 25;">
+                        <a href="https://www.nhaccuatui.com/video/ngoi-sao-co-don-jack-j97.ORrSB5kFo8xyN.html">Ngôi Sao Cô Đơn</a>
+                    </p>                                    
+                    <p style="font-size: 10px;">
+                        Jack 5 Củ
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="khung3">
+            <a href="https://www.nhaccuatui.com/bai-hat/tong-phu-dai-meo-remix-keyo-viet-nam.uuWVH0amjNoP.html"><img style="float: left;" src="images/tòng phu.jpg" width="70px" height="70px" alt=""></a>
+            <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                <p style="font-size: 25;">
+                    <a href="https://www.nhaccuatui.com/bai-hat/tong-phu-dai-meo-remix-keyo-viet-nam.uuWVH0amjNoP.html">Tòng Phu Remix</a>
+                </p>                                    
+                <p style="font-size: 10px;">
+                    Keyo
+                </p>
+            </div>
+            <div style="margin-left: 380px;">
+                <a href="https://www.nhaccuatui.com/bai-hat/tam-long-son-remix-h-kray-ft-dai-meo.14mdUsLFe31J.html"><img style="float: left;" src="images/tấm lòng son.jpg" width="70px" height="70px" alt=""></a> 
+                <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                    <p style="font-size: 25;">
+                        <a href="https://www.nhaccuatui.com/bai-hat/tam-long-son-remix-h-kray-ft-dai-meo.14mdUsLFe31J.html">Tấm Lòng Son Remix</a>
+                    </p>                                    
+                    <p style="font-size: 10px;">
+                        H-Kray, Đại Mèo
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="khung4">
+            <a href="https://www.nhaccuatui.com/bai-hat/the-gioi-trong-em-dai-meo-remix-huong-ly-ft-dai-meo.cnO4m7bqae4n.html"><img style="float: left;" src="images/thế giới trong em.jpg" width="70px" height="70px" alt=""></a> 
+            <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                <p style="font-size: 25;">
+                    <a href="https://www.nhaccuatui.com/bai-hat/the-gioi-trong-em-dai-meo-remix-huong-ly-ft-dai-meo.cnO4m7bqae4n.html">Thế Giới Trong Em</a>
+                </p>                                    
+                <p style="font-size: 10px;">
+                    Hương Ly, Đại Mèo
+                </p>
+            </div>
+            <div style="margin-left: 380px;">
+                <a href="https://www.nhaccuatui.com/bai-hat/dap-an-cuoi-cung-quan-ap.I9uo47SekQLW.html"><img style="float: left;" src="images/dap an cuoi cung.jpg" width="70px" height="70px" alt=""></a> 
+                <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                    <p style="font-size: 25;">
+                        <a href="https://www.nhaccuatui.com/bai-hat/dap-an-cuoi-cung-quan-ap.I9uo47SekQLW.html">Đáp Án Cuối Cùng</a>
+                    </p>                                    
+                    <p style="font-size: 10px;">
+                        Quân AP
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="khung5">
+            <a href="https://www.nhaccuatui.com/bai-hat/khong-gi-co-the-thay-the-em-live-khai-dang.YaIaL2l9TQOe.html"><img style="float: left;" src="images/khong gi co the thay the em.jpg" width="70px" height="70px" alt=""></a> 
+            <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                <p style="font-size: 25;">
+                    <a href="https://www.nhaccuatui.com/bai-hat/khong-gi-co-the-thay-the-em-live-khai-dang.YaIaL2l9TQOe.html">Không Gì Có Thể Thay Thế Em</a>
+                </p>                                    
+                <p style="font-size: 10px;">
+                    Khải Đăng
+                </p>
+            </div>
+            <div style="margin-left: 380px;">
+                <a href="https://www.nhaccuatui.com/bai-hat/sao-hay-ra-de-qua-le-duong-bao-lam.HaXM5l2Ei3hX.html"><img style="float: left;" src="images/sao hay ra de.jpg" width="70px" height="70px" alt=""></a> 
+                <div style="margin: 0px; padding: 0px; float: left;  margin-left: 10px;">
+                    <p style="font-size: 25;">
+                        <a href="https://www.nhaccuatui.com/bai-hat/sao-hay-ra-de-qua-le-duong-bao-lam.HaXM5l2Ei3hX.html">Sao Hay Ra Dẻ</a>
+                    </p>                                    
+                    <p style="font-size: 10px;">
+                        Lê Dương Bảo Lâm
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h2 id="nghesi">NGHỆ SĨ</h2>
+        <div id="cacnghesi">
+            <div style="margin-left:180px;">
+                <a href="https://www.nhaccuatui.com/nghe-si-le-bao-binh.html"><img style="height: 200px; width:180px;" src="images/lê bảo bình.jpg" alt=""></a>
+                <a style="margin:70px" href="https://www.nhaccuatui.com/nghe-si-noo-phuoc-thinh.html"><img style="height: 200px; width:180px;" src="images/phước thịnh.jpg" alt=""></a>
+                <a href="https://www.nhaccuatui.com/nghe-si-erik.html"><img style="height: 200px; width:180px;" src="images/erik.jpg" alt=""></a> <br>
+                <a style="margin-right:150px" href="https://www.nhaccuatui.com/nghe-si-le-bao-binh.html">LÊ BẢO BÌNH</a>
+                <a style="margin-right:95px" href="https://www.nhaccuatui.com/nghe-si-noo-phuoc-thinh.html">NOO PHƯỚC THỊNH</a>
+                <a href="https://www.nhaccuatui.com/nghe-si-erik.html">ERIK</a>
+            </div>
+        </div>
+        <div style="margin-top:30px" id="cacnghesi2">
+            <div style="margin-left:180px;">
+                <a href="https://www.nhaccuatui.com/nghe-si-quang-ha.html"><img style="height: 200px; width:180px;" src="images/quang hà.jpg" alt=""></a>
+                <a style="margin:70px" href="https://www.nhaccuatui.com/nghe-si-chi-dan.html"><img style="height: 200px; width:180px;" src="images/chi dân.jpg" alt=""></a>
+                <a href="https://www.nhaccuatui.com/nghe-si-chau-khai-phong.html"><img style="height: 200px; width:180px;" src="images/châu khải phong.jpg" alt=""></a> <br>
+                <a style="margin-right:163px" href="https://www.nhaccuatui.com/nghe-si-quang-ha.html">QUANG HÀ</a>
+                <a style="margin-right:186px" href="https://www.nhaccuatui.com/nghe-si-chi-dan.html">CHI DÂN</a>
+                <a href="https://www.nhaccuatui.com/nghe-si-chau-khai-phong.html">CHÂU KHẢI PHONG</a>
+            </div>
+        </div>
+        <div style="margin-top:30px" id="cacnghesi3">
+            <div style="margin-left:180px;">
+                <a href="https://www.nhaccuatui.com/nghe-si-Zayn.html"><img style="height: 200px; width:180px;" src="images/zayn.jpg" alt=""></a>
+                <a style="margin:70px" href="https://www.nhaccuatui.com/nghe-si-taylor-swift.html"><img style="height: 200px; width:180px;" src="images/taylor.jpg" alt=""></a>
+                <a href="https://www.nhaccuatui.com/nghe-si-marshmello.html"><img style="height: 200px; width:180px;" src="images/marshmello.jpg" alt=""></a> <br>
+                <a style="margin-right:208px" href="https://www.nhaccuatui.com/nghe-si-Zayn.html">ZAYN</a>
+                <a style="margin-right:130px" href="https://www.nhaccuatui.com/nghe-si-taylor-swift.html">TAYLOR SWIFT</a>
+                <a href="https://www.nhaccuatui.com/nghe-si-marshmello.html">MARSHMELLO</a>
+            </div>
+        </div>  
+    </div>
+    <div id="top100" style="margin-left: 10px;margin-top: 100px;">
+        <h2 style="color: cornflowerblue; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TOP 100</h2>  
+        <div id="top">
+            <a href="https://www.nhaccuatui.com/playlist/top-100-nhac-tre-hay-nhat-va.m3liaiy6vVsF.html"><img src="images/1111.jpg" alt=""></a>
+            <a href="https://www.nhaccuatui.com/playlist/top-100-rap-viet-hay-nhat-va.iY1AnIsXedqE.html"><img src="images/2222.jpg" alt=""></a>
+            <a href="https://www.nhaccuatui.com/playlist/top-100-nhac-han-hay-nhat-va.iciV0mD8L9Ed.html"><img src="images/3333.jpg" alt=""></a>
+            <a href="https://www.nhaccuatui.com/playlist/top-100-nhac-trinh-hay-nhat-va.v0AGjIhhCegh.html"><img src="images/4444.jpg" alt=""></a>
+            <a href="https://www.nhaccuatui.com/playlist/top-100-nhac-country-hay-nhat-va.EpHtSo41Zstq.html"><img src="images/5555.jpg" alt=""></a>
+            <a href="https://www.nhaccuatui.com/playlist/top-100-remix-viet-hay-nhat-va.aY3KIEnpCywU.html"><img src="images/6666.jpg" alt=""></a>
+            <a href="https://www.nhaccuatui.com/playlist/top-100-pop-usuk-hay-nhat-va.zE23R7bc8e9X.html"><img src="images/7777.jpg" alt=""></a>
+        </div>
+    </div>
+    <div>
+    </div>
+
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/634e5686daff0e1306d28f61/1gfl040d2';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+
+    <!-- SWITCH DARK OR LIGHT -->
+    <!-- <style>
+        :root{
+            --transition-effect: 0.25s cubic-bezier(.25,-0.59,.82,1.66) .3s;
+        }
+        body{
+            background: #fff;
+            transition: var(--transition-effect);
+        }
+        body.dark{
+            background: #111;
+        }
+        #wrapper{
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            min-height: 60vh;
+        }
+        .switch-toggle{
+            width: 40px;
+            height: 20px;
+            appearance: none;
+            background: #83d8ff;
+            border-radius: 26px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: inset 0px 0px 16px rgba(0, 0, 0, .3);
+            transition: var(--transition-effect);
+        }
+        .switch-toggle::before{
+            content: "";
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            background: #3135b7;
+            border-radius: 50%;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
+            transition: var(--transition-effect);
+        
+        }
+        .switch-toggle:checked{
+            background: #749dd6;
+        }
+        .switch-toggle:checked:before{
+            left: 22px;
+        }
+    </style>
+    <div id="wrapper">
+        <input type="checkbox" name="" class="switch-toggle" id="light-dark">
+    </div>
+    <script>
+        var checkbox_toggle = document.getElementById('light-dark');
+        checkbox_toggle.addEventListener('change', function(){
+            // THêm class dark cho body
+            document.body.classList.toggle('dark');
+        });
+    </script> -->
+    <!-- END SWITCH  -->
+
+    <footer style="text-align: center;">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        // kéo xuống khoảng cách 500px thì xuất hiện nút Top-up
+        var offset = 500;
+        // thời gian di trượt 0.75s ( 1000 = 1s )
+        var duration = 750;
+        $(function(){
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > offset)
+        $('#top-up').fadeIn(duration);else
+        $('#top-up').fadeOut(duration);
+        });
+        $('#top-up').click(function () {
+        $('body,html').animate({scrollTop: 0}, duration);
+        });
+        });
+        </script>
+        <div title="Trở về đầu trang" id="top-up">
+        <!-- <i class="fal fa-rocket-launch"></i> -->
+        <i id="backtotop" class="fas fa-fighter-jet fa-rotate-270"></i>
+        </div>
+        <div id="ft" style="text-align: center;">
+            <p>© Copyright by Nhac Cua Tui  ☞ Do not Reup</p>
+        </div>
+    </footer>
+
+</body>
+</html>
